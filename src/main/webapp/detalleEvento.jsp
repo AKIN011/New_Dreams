@@ -14,7 +14,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" >
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
@@ -92,7 +92,7 @@
                                 </c:forEach>
 
                                 <div class="form-group col-sm-4">
-                                    <a href="historialPagosCliente.jsp"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
+                                    <a href="detallesPagos.jsp"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>

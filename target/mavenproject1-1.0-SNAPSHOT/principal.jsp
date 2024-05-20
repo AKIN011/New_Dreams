@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesprincipal.css">
         <!-- DataTables CSS -->
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
     </head>
 
     <body>
@@ -115,7 +115,7 @@
         <script src="https://kit.fontawesome.com/909a90592e.js" crossorigin="anonymous"></script>
         <script src="js/scriptPrincipal.js"></script>
         <!-- DataTables JS -->
-        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
 
     </body>
 </html>
