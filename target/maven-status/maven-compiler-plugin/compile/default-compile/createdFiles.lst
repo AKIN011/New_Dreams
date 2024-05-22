@@ -1,6 +1,7 @@
 DAO\clienteDAO.class
 Modelo\cotizacionServicio.class
 Controlador\LogoutServlet.class
+Modelo\eventoServicio.class
 DAO\cotizacionServicioDAO.class
 DAO\administradorDAO.class
 Modelo\cliente.class
