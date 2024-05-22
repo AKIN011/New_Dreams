@@ -28,12 +28,13 @@
                         <div class="card-details">
                             <c:forEach var="Detalle" items="${detalles}">
                                 <h3 class="title">Id del evento: ${Detalle[4]}</h3><br>
-                                
+
                                 <div class="row">
 
                                     <div class="form-group col-sm-6">
                                         <label for="card-holder">Nombre del cliente</label>
                                         <input id="nombre-cliente" type="text" class="form-control" value="${Detalle[0]}" readonly>
+                                        <input type="hidden" id="idCliente" name="idCliente" value="${Detalle[11]}">
                                     </div><br>
                                     <div class="form-group col-sm-6">
                                         <label for="card-holder">Apellido del cliente</label>
@@ -89,14 +90,13 @@
                                             </div>
                                         </div>
                                     </c:forEach>
+                                    <div class="form-group col-sm-4">
+                                        <a href="PagoServlet?menu=listaPagos&idEvento=${Detalle[4]}&idCliente=${Detalle[11]}"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
+                                    </div>
                                 </c:forEach>
-
-                                <div class="form-group col-sm-4">
-                                    <a href="PagoServlet?menu=listaPagos&No_Pagos"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
-                                </div>
                             </div>
                     </form>
                 </div>

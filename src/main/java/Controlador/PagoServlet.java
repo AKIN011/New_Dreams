@@ -26,9 +26,10 @@ public class PagoServlet extends HttpServlet {
 
         String menu = request.getParameter("menu");
         if (menu != null && menu.equals("listaPagos")) {
-            String No_Pagos = request.getParameter("No_Pagos");
-            List<Object[]> listarPagos = pagoDAO.ListarPagos();
-            request.setAttribute("Pagos", listarPagos );
+            String idCliente = request.getParameter("idCliente");
+            int idEvento = Integer.parseInt(request.getParameter("idEvento"));
+            List<Object[]> listarPagos = pagoDAO.ListarPagos(idCliente, idEvento);
+            request.setAttribute("Pagos", listarPagos);
             
             request.getRequestDispatcher("pagos.jsp").forward(request, response);
             

@@ -59,12 +59,5 @@ public class pago {
     }
     
     
-    private String idPagos;
-    private int Referente;
-    private cotizante cotizante;
-    private Date fechaPago;
-    private int valor;
-    private evento evento;
-    private cliente cliente;
        
 }
