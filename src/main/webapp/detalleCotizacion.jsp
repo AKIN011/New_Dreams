@@ -27,7 +27,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/detallesCotizacion.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
     <body>
@@ -96,9 +97,9 @@
                                             <div class="container">
                                                 <div class="card mt-2 mx-auto bg-light">
                                                     <div class="card-body bg-light">
-                                                        <h4>Servicios:</h4>
-                                                        <div class="form-group col-sm-12">
-                                                            <button type="button" class="btn btn-success btn-block" onclick="openModal(${cotizacion[0]})">Agregar Servicio</button>
+                                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                                            <h4 class="mb-0">Servicios:</h4>
+                                                            <button type="button" class="btn btn-success" onclick="openModal('${cotizacion[0]}')">Agregar Servicio</button>
                                                         </div>
                                                         <c:forEach var="servicio" items="${cotizacion[11]}">
                                                             <div class="row mb-2 service-item">
@@ -133,16 +134,15 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-sm-4">
-                                            <a href="#"><button type="button" class="btn btn-primary btn-block">Actualizar cotización</button></a>
-                                        </div>
-                                        <div class="form-group col-sm-4">
-                                            <a href="#"><button type="button" class="btn btn-primary btn-block">Crear evento</button></a>
-                                        </div>
-                                        <div class="form-group col-sm-4">
-                                            <a href="PrincipalServlet?menu=Cotizaciones&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
+                                        <div class="form-group col-12 d-flex justify-content-end">
+                                            <div class="btn-group">
+                                                <a href="#"><button type="button" class="btn btn-primary">Actualizar cotización</button></a>
+                                                <a href="#"><button type="button" class="btn btn-primary">Crear evento</button></a>
+                                                <a href="PrincipalServlet?menu=Cotizaciones&accion=listar"><button type="button" class="btn btn-primary">Atrás</button></a>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </c:forEach>
                             </div>
                         </form>
@@ -150,14 +150,29 @@
                 </section>
             </main>
         </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div id="modalContent">
-                    <!-- Aquí se cargará el contenido de los servicios -->
+        <!-- Modal Structure -->
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Agregar Servicio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="searchInput" onkeyup="filterServices()" class="form-control mb-3" placeholder="Buscar servicios...">
+                        <div id="servicesList" class="list-group">
+                            <!-- Aquí se cargará el contenido de los servicios -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="addSelectedServices()">Agregar Servicios</button>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -115,7 +115,8 @@
         <script src="https://kit.fontawesome.com/909a90592e.js" crossorigin="anonymous"></script>
         <script src="js/scriptPrincipal.js"></script>
         <!-- DataTables JS -->
-        <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
-
+        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <!-- Detalle Cotizacion JS -->
+        <script src="js/scriptDetallesCotizacion.js"></script>
     </body>
 </html>

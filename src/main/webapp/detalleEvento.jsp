@@ -92,7 +92,7 @@
                                 </c:forEach>
 
                                 <div class="form-group col-sm-4">
-                                    <a href="detallesPagos.jsp"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
+                                    <a href="PagoServlet?menu=listaPagos&No_Pagos"><button type="button" class="btn btn-primary btn-block">historial de pagos</button></a>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
