@@ -26,7 +26,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <table class="table">
+                    <table id="Table" class="table display">
                         <thead>
                             <tr>
                                 <th scope="col">Numero de evento</th>
@@ -43,7 +43,7 @@
                                     <td>${Eventos[1]} ${Eventos[2]}</td>
                                     <td>${Eventos[3]}</td>
                                     <td>${Eventos[4]}</td>
-                                    <td><a href="EventoServlet?menu=detalleEvento&idEvento=${Eventos[0]}"><button>ver mas</button></a></td>
+                                    <td><a href="EventoServlet?menu=detalleEvento&idEvento=${Eventos[0]}"><button>detalle</button></a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

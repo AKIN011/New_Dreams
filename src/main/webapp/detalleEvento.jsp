@@ -47,19 +47,13 @@
                                         <label for="card-holder">Telefono del cliente</label>
                                         <input id="telefono-cliente" type="text" class="form-control" value="${Detalle[3]}" readonly>
                                     </div>
-                                    <div class="form-group col-sm-8">
+                                    <div class="form-group col-sm-6">
                                         <label for="card-number">Tipo de evento</label>
                                         <input id="tipo-evento" type="text" class="form-control" value="${Detalle[5]}" readonly>
                                     </div>
-                                    <div class="form-group col-sm-4">
+                                    <div class="form-group col-sm-6">
                                         <label for="cvc">Cantidad de personas</label>
                                         <input id="cantidad-personas" type="text" class="form-control" value="${Detalle[9]}" readonly>
-                                    </div>
-                                    <div class="form-group col-sm-8">
-                                        <label for="">Fecha del evento</label>
-                                        <div class="input-group expiration-date">
-                                            <input id="fecha-evento" type="text" class="form-control" value="${Detalle[6]}" readonly>
-                                        </div>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="cvc">Estado del evento</label>
@@ -80,7 +74,7 @@
                                             <p class="col-3 col-md-3">V.Total</p>
                                             <div class="col-4 col-md-4">
                                                 <div class="form-group">
-                                                    <input id="service_name_manteleria_${loop.index}" type="text" name="service_name_${loop.index}" class="form-control" value="${servicio[2]}" readonly>
+                                                    <input id="service_name_manteleria_${loop.index}" type="number" name="service_name_${loop.index}" class="form-control" value="${servicio[2]}" readonly>
                                                 </div>
                                             </div>
                                             <div class="col-3 col-md-3">

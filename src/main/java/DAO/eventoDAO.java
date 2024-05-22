@@ -72,14 +72,11 @@ public class eventoDAO {
                 cotizacion.setCantidadPersonas(rs.getInt("Cantidad_Personas_Cotización"));
 
                 // Crear la lista de servicios para este evento
-                /**/
                 String[] nombresServicios = rs.getString("Nombres_Servicios").split(", ");
                 String[] valoresServicios = rs.getString("Valor_Servicios").split(", ");
                 String[] cantidad = rs.getString("Cantidad").split(", ");
                 String[] valorUnitario = rs.getString("Valor_Unitario").split(", ");
                 String[] tipoServicio = rs.getString("Tipo_Servicio").split(", ");
-                /*String[] nombres = nombresServicios.split(",");
-                String[] valores = valoresServicios.split(",");*/
 
                 if (nombresServicios.length == valorUnitario.length
                         && nombresServicios.length == cantidad.length
