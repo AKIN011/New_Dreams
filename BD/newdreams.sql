@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
+<<<<<<< HEAD
 -- Tiempo de generación: 22-05-2024 a las 07:09:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
+=======
+-- Tiempo de generación: 21-05-2024 a las 00:35:04
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -336,9 +342,23 @@ INSERT INTO `cliente` (`idCliente`, `Estado_Cliente`, `Contraseña_Cliente`, `Co
 ('CL003', 'Inhabilitado', 'd28v5f4f', 'mauriciotorres@gmail.com'),
 ('CL004', 'Inhabilitado', 'd2fg6f9d8Ee', 'valentinapaez@gmail.com'),
 ('CL005', 'Habilitado', 'EFrfg3548eD54', 'santiagocastellanos@gmail.com'),
+<<<<<<< HEAD
 ('CL014', 'Inhabilitado', '1345', 'mariamartinez2@gmail.com'),
 ('CL015', 'Habilitado', 'hola123', 'dfelipebr737@gmail.com'),
 ('CL016', 'Inhabilitado', '123asc', 'andresmartinez@gmail.com');
+=======
+('CL014', 'Habilitado', '1345', 'mariamartinez2@gmail.com'),
+('CL015', 'Habilitado', 'contraseÃ±a1', 'dfelipebr737@gmail.com'),
+('CL016', 'Inhabilitado', '123asc', 'andresmartinez@gmail.com'),
+('CL017', 'Habilitado', 'hol12', 'alfrecas@mail.com'),
+('CL018', 'Habilitado', 'cba321', 'Angelica@mail.com'),
+('CL019', 'Habilitado', 'holajiji', 'edilson@mail.com'),
+('CL020', 'Habilitado', '123', 'DanielGa@mail.com'),
+('CL021', 'Habilitado', 'holajiji1', 'franro@gmail.com'),
+('CL022', 'Habilitado', 'harry32', 'harrilo@mail.com'),
+('CL023', 'Habilitado', 'gua32', 'Dana@mail.com'),
+('CL024', 'Habilitado', 'kevin', 'kevinsanty@mail.com');
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
 
 --
 -- Disparadores `cliente`
@@ -441,7 +461,92 @@ INSERT INTO `cotizacion_servicio` (`Cotizacion_No_Cotizacion`, `Servicio_idServi
 ('COT1001', 'S01', 0, 0),
 ('COT1001', 'S02', 0, 0),
 ('COT1001', 'S03', 0, 0),
+<<<<<<< HEAD
 ('COT1001', 'S04', 0, 0);
+=======
+('COT1001', 'S04', 0, 0),
+('COT1006', 'S06', 10, 12000),
+('COT1006', 'S05', 10, 1200),
+('COT1016', 'S01', 10, 70000),
+('COT1016', 'S03', 10, 35000),
+('COT1016', 'S05', 10, 100000),
+('COT1016', 'S07', 10, 12000),
+('COT1016', 'S15', 10, 600000),
+('COT1017', 'S01', 10, 70000),
+('COT1017', 'S03', 10, 35000),
+('COT1017', 'S05', 10, 100000),
+('COT1017', 'S07', 10, 12000),
+('COT1017', 'S15', 10, 600000),
+('COT1017', 'S20', 100, 100000),
+('COT1018', 'S01', 3, 21000),
+('COT1018', 'S03', 30, 105000),
+('COT1018', 'S05', 3, 30000),
+('COT1018', 'S07', 30, 36000),
+('COT1018', 'S20', 30, 30000),
+('COT1019', 'S01', 2, 14000),
+('COT1019', 'S03', 20, 70000),
+('COT1019', 'S05', 2, 20000),
+('COT1019', 'S07', 20, 24000),
+('COT1019', 'S13', 2, 90000),
+('COT1019', 'S20', 30, 30000),
+('COT1020', 'S01', 3, 21000),
+('COT1020', 'S03', 30, 105000),
+('COT1020', 'S05', 3, 30000),
+('COT1020', 'S07', 30, 36000),
+('COT1020', 'S20', 30, 30000),
+('COT1021', 'S01', 10, 70000),
+('COT1021', 'S03', 10, 35000),
+('COT1021', 'S05', 10, 100000),
+('COT1021', 'S07', 10, 12000),
+('COT1021', 'S20', 30, 30000),
+('COT1022', 'S01', 10, 70000),
+('COT1022', 'S03', 10, 35000),
+('COT1022', 'S05', 10, 100000),
+('COT1022', 'S07', 10, 12000),
+('COT1022', 'S13', 10, 450000),
+('COT1022', 'S20', 30, 30000),
+('COT1023', 'S01', 10, 70000),
+('COT1023', 'S03', 10, 35000),
+('COT1023', 'S05', 10, 100000),
+('COT1023', 'S07', 10, 12000),
+('COT1023', 'S20', 30, 30000),
+('COT1024', 'S01', 10, 70000),
+('COT1024', 'S03', 10, 35000),
+('COT1024', 'S05', 10, 100000),
+('COT1024', 'S07', 10, 12000),
+('COT1024', 'S20', 30, 30000),
+('COT1025', 'S01', 10, 70000),
+('COT1025', 'S03', 10, 35000),
+('COT1025', 'S05', 10, 100000),
+('COT1025', 'S07', 10, 12000),
+('COT1025', 'S15', 5, 300000),
+('COT1025', 'S16', 2, 4000),
+('COT1025', 'S20', 100, 100000),
+('COT1026', 'S01', 10, 70000),
+('COT1026', 'S03', 10, 35000),
+('COT1026', 'S05', 10, 100000),
+('COT1026', 'S07', 10, 12000),
+('COT1026', 'S20', 30, 30000),
+('COT1027', 'S01', 10, 70000),
+('COT1027', 'S02', 20, 300000),
+('COT1027', 'S03', 10, 35000),
+('COT1027', 'S07', 20, 24000),
+('COT1027', 'S10', 45, 3600000),
+('COT1027', 'S15', 78, 4680000),
+('COT1027', 'S17', 65, 650000),
+('COT1027', 'S19', 12, 84000),
+('COT1027', 'S20', 45, 45000),
+('COT1028', 'S03', 3, 10500),
+('COT1028', 'S06', 45, 675000),
+('COT1028', 'S08', 34, 170000),
+('COT1028', 'S11', 3, 120000),
+('COT1028', 'S13', 54, 2430000),
+('COT1028', 'S15', 3, 180000),
+('COT1028', 'S16', 4, 8000),
+('COT1028', 'S17', 3, 30000),
+('COT1028', 'S18', 3, 36000),
+('COT1028', 'S19', 3, 21000);
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
 
 -- --------------------------------------------------------
 
@@ -470,7 +575,24 @@ INSERT INTO `cotización` (`No_Cotizacion`, `Tipo_Cotizacion`, `Ubicacion`, `Fec
 ('COT1003', 'Boda', 'Salon comunal perseverancia', '2024-02-03 02:00:00', '2023-05-01 08:00:00', 3500000, 80, 'valentinapaez@gmail.com'),
 ('COT1004', 'Bautizo', 'Salon comunal puente aranda', '2023-07-15 07:30:00', '2023-07-28 10:15:00', 2500000, 70, 'santiagocastellanos@gmail.com'),
 ('COT1005', 'Xv años', 'Salon comunal bosa', '2023-12-30 12:45:00', '2023-08-02 02:30:00', 4500000, 80, 'mauriciotorres@gmail.com'),
+<<<<<<< HEAD
 ('COT1006', '', 'santa rosa', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 5000000, 30, 'mariamartinez@gmail.com');
+=======
+('COT1006', '', 'santa rosa', '2024-06-27 16:32:52', '2024-05-16 16:32:52', 5000000, 30, 'alfsan@gmail.com'),
+('COT1016', '', 'La empresa buscará el lugar del evento', '2024-06-21 17:30:00', '2024-05-08 16:33:00', 817000, 30, 'loreber@mail.com'),
+('COT1017', '', 'La empresa buscará el lugar del evento', '2024-07-31 17:30:00', '2024-05-08 16:50:00', 917000, 70, 'Zharick@mail.com'),
+('COT1018', '', 'Kennedy, Carrera 30 calle 19, Roma', '2024-06-21 16:00:00', '2024-05-08 16:55:00', 222000, 30, 'DanielGa@mail.com'),
+('COT1019', 'Bautizo', 'Salon comunal, Cra 81 h 76F 15, Bosa', '2024-07-11 18:30:00', '2024-05-08 17:07:00', 248000, 20, 'alfrecas@mail.com'),
+('COT1020', 'Comunion', 'La empresa buscará el lugar del evento', '2024-07-20 16:00:00', '2024-05-09 18:19:00', 222000, 30, 'Dana@mail.com'),
+('COT1021', 'Bautizo', 'La empresa buscará el lugar del evento', '2024-06-21 14:00:00', '2024-05-09 18:31:00', 247000, 30, 'Oreo@mail.com'),
+('COT1022', 'Boda', 'La empresa buscará el lugar del evento', '2024-08-20 17:30:00', '2024-05-09 18:32:00', 697000, 30, 'tom@mail.com'),
+('COT1023', 'XVaÃ±os', 'La empresa buscará el lugar del evento', '2024-07-27 20:30:00', '2024-05-09 19:00:00', 247000, 100, 'reamm@mail.com'),
+('COT1024', 'Grado', 'La empresa buscará el lugar del evento', '2024-06-20 20:30:00', '2024-05-09 19:07:00', 247000, 100, 'weekend@mail.co'),
+('COT1025', 'XVaÃ±os', 'Salon comunal, Cra 81 h 76F 15, Bosa', '2024-07-27 18:30:00', '2024-05-15 12:19:00', 621000, 100, 'guillermoisa@mail.com'),
+('COT1026', 'XVaÃ±os', 'La empresa buscará el lugar del evento', '2024-07-20 20:30:00', '2024-05-20 12:53:00', 247000, 30, 'estefania@mail.com'),
+('COT1027', 'Boda', 'La empresa buscará el lugar del evento', '2024-06-30 05:55:00', '2024-05-20 15:37:00', 10523000, 120, 'andrestienecacho@gmial.com'),
+('COT1028', 'Bautizo', 'La empresa buscará el lugar del evento', '2024-07-24 17:50:00', '2024-05-20 17:18:00', 3680500, 50, 'kevinromero@gmail.com');
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
 
 --
 -- Disparadores `cotización`
@@ -516,6 +638,7 @@ CREATE TABLE `cotizante` (
 -- Volcado de datos para la tabla `cotizante`
 --
 
+<<<<<<< HEAD
 INSERT INTO `cotizante` (`Correo_Cotizante`, `Nombre_Cotizante`, `Apellido_Cotizante`, `Telefono_Cotizante`) VALUES
 ('alfsan@gmail.com', 'Alfonso', 'Snachez', '0759485'),
 ('andresmartinez@gmail.com', 'Andres', 'Martinez', '3112104578'),
@@ -528,6 +651,45 @@ INSERT INTO `cotizante` (`Correo_Cotizante`, `Nombre_Cotizante`, `Apellido_Cotiz
 ('pepitoperez@gmail.com', 'felipe', 'Perez', '3224569875'),
 ('santiagocastellanos@gmail.com', 'Santiago', 'Castellanos', '3112365478'),
 ('valentinapaez@gmail.com', 'Valentina', 'Paez', '3102548965');
+=======
+INSERT INTO `cotizante` (`Correo_Cotizante`, `Nombre_Cotizante`, `Apellido_Cotizante`, `Telefono_Cotizante`, `Cliente`) VALUES
+('Alfonso@mail.com', 'Alfonso', 'Lopez', '874512', 0),
+('alfrecas@mail.com', 'Alfredo', 'Castro', '875421', 1),
+('alfsan@gmail.com', 'Alfonso', 'Snachez', '0759485', 0),
+('andresmartinez@gmail.com', 'Andres', 'Martinez', '3112104578', 1),
+('andrestienecacho@gmial.com', 'andres ', 'galindo', '39419874', 0),
+('Angelica@mail.com', 'Angelica', 'Martinez', '9884512', 1),
+('angesu@mail.com', 'Angelica', 'Suarez', '120354', 0),
+('Dana@mail.com', 'Dana', 'Cespedes', '216598', 1),
+('DanielGa@mail.com', 'Daniel Mauricio', 'Chambo Gaviria', '3202114578', 1),
+('dfelipebr737@gmail.com', 'Felipe', 'Bernal Rodriguez', '3112711553', 1),
+('edilson@mail.com', 'Edilson', 'Maecha', '986532', 1),
+('estefania@mail.com', 'Estefania', 'Gavaria', '3112065487', 0),
+('Felipe@mail.com', 'Felipe', 'Rodriguez', '895623', 0),
+('franro@gmail.com', 'Francisco', 'Rojas Rey', '012345', 1),
+('franro@htomail.com', 'Francisco', 'Rojas', '0321457', 0),
+('Guillermo@mail.com', 'Guillermo', 'Camacho', '789632', 0),
+('guillermoisa@mail.com', 'Guillermo', 'Izasa', '875432', 0),
+('harrilo@mail.com', 'Harrison ', 'Lopez', '985421', 1),
+('Javier@mail.com', 'Javier', 'Rodriguez', '78523', 0),
+('Juliomar@mail.com', 'Julio', 'Martinez', '1230', 0),
+('kevinromero@gmail.com', 'kevin ', 'romero', '295983452', 0),
+('Kevinsa@mail.com', 'Kevin', 'Salazar', '784512', 0),
+('kevinsanty@mail.com', 'Kevin Santiago', 'Gonzalez Romero', '3112458975', 1),
+('loreber@mail.com', 'Lorena', 'Berrio', '87653212', 0),
+('mariamartinez2@gmail.com', 'maria', 'martinez', '12345', 1),
+('mariamartinez@gmail.com', 'Maria', 'Martinez', '3224532545', 1),
+('mauriciotorres@gmail.com', 'Mauricio', 'Torres', '3229851236', 1),
+('Oreo@mail.com', 'Oreo', 'Rodriguez', '875432', 0),
+('pepitoperez@gmail.com', 'Pepito', 'Perez', '3224569875', 1),
+('reamm@mail.com', 'Ramm', 'Einstein', '10325', 0),
+('santiagocastellanos@gmail.com', 'Santiago', 'Castellanos', '3112365478', 1),
+('tom@mail.com', 'tom', 'holland', '876532', 0),
+('valentinapaez@gmail.com', 'Valentina', 'Paez', '3102548965', 1),
+('vivian@mail.com', 'Vivian', 'Hincapie', '87541', 0),
+('weekend@mail.co', 'Weekend', 'Testaye', '876532', 0),
+('Zharick@mail.com', 'Zharick', 'Serna', '875421', 0);
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
 
 -- --------------------------------------------------------
 
@@ -627,6 +789,7 @@ INSERT INTO `evento_servicio` (`Evento_idEvento`, `Servicio_idServicio`, `Cantid
 
 CREATE TABLE `pagos` (
   `No_Pagos` char(5) NOT NULL,
+  `Referente` int(5) NOT NULL,
   `Nombre_Pagos` varchar(45) NOT NULL,
   `Apellido_Pagos` varchar(45) NOT NULL,
   `Dia_hora_pagos` datetime NOT NULL,
@@ -639,12 +802,12 @@ CREATE TABLE `pagos` (
 -- Volcado de datos para la tabla `pagos`
 --
 
-INSERT INTO `pagos` (`No_Pagos`, `Nombre_Pagos`, `Apellido_Pagos`, `Dia_hora_pagos`, `Valor_pagos`, `Evento_idEvento`, `Evento_Cliente_idCliente`) VALUES
-('P0001', 'Mauricio', 'Torres', '2023-10-25 10:30:00', 50000, 1, 'CL001'),
-('P0002', 'Pepito', 'Perez', '2024-06-23 06:00:00', 70000, 2, 'CL002'),
-('P0003', 'Valentina', 'Paez', '2024-02-03 02:00:00', 30000, 3, 'CL003'),
-('P0004', 'Santiago', 'Castellanos', '2023-07-28 10:15:00', 250000, 4, 'CL004'),
-('P0005', 'Mauricio', 'Torres', '2023-08-02 02:30:00', 450000, 5, 'CL005');
+INSERT INTO `pagos` (`No_Pagos`, `Referente`, `Nombre_Pagos`, `Apellido_Pagos`, `Dia_hora_pagos`, `Valor_pagos`, `Evento_idEvento`, `Evento_Cliente_idCliente`) VALUES
+('P0001', 0, 'Mauricio', 'Torres', '2023-10-25 10:30:00', 50000, 1, 'CL001'),
+('P0002', 0, 'Pepito', 'Perez', '2024-06-23 06:00:00', 70000, 2, 'CL002'),
+('P0003', 0, 'Valentina', 'Paez', '2024-02-03 02:00:00', 30000, 3, 'CL003'),
+('P0004', 0, 'Santiago', 'Castellanos', '2023-07-28 10:15:00', 250000, 4, 'CL004'),
+('P0005', 0, 'Mauricio', 'Torres', '2023-08-02 02:30:00', 450000, 5, 'CL005');
 
 --
 -- Disparadores `pagos`
@@ -763,6 +926,43 @@ CREATE TABLE `vista_evento` (
 ,`Valor_Unitario` mediumtext
 ,`Tipo_Servicio` mediumtext
 );
+
+-- --------------------------------------------------------
+
+--
+<<<<<<< HEAD
+-- Estructura para la vista `vista_evento`
+=======
+-- Estructura Stand-in para la vista `vista_evento`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vista_evento` (
+`Nombre_Cotizante` varchar(45)
+,`Apellido_Cotizante` varchar(45)
+,`Correo_Cotizante` varchar(45)
+,`Telefono_Cotizante` varchar(45)
+,`idEvento` int(11)
+,`Tipo_evento` varchar(45)
+,`Fecha_evento` datetime
+,`Estado_evento` varchar(45)
+,`Descripcion_evento` varchar(200)
+,`Cantidad_Personas_Cotización` smallint(6)
+,`Nombres_Servicios` mediumtext
+,`Valor_Servicios` mediumtext
+,`Cantidad` mediumtext
+,`Valor_Unitario` mediumtext
+,`Tipo_Servicio` mediumtext
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_cotizaciones`
+>>>>>>> cbaf6ef4e604a84d05c6b215c764ecc03bc5e6e7
+--
+DROP TABLE IF EXISTS `vista_evento`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_evento`  AS SELECT `c`.`Nombre_Cotizante` AS `Nombre_Cotizante`, `c`.`Apellido_Cotizante` AS `Apellido_Cotizante`, `c`.`Correo_Cotizante` AS `Correo_Cotizante`, `c`.`Telefono_Cotizante` AS `Telefono_Cotizante`, `e`.`idEvento` AS `idEvento`, `e`.`Tipo_evento` AS `Tipo_evento`, `e`.`Fecha_evento` AS `Fecha_evento`, `e`.`Estado_evento` AS `Estado_evento`, `e`.`Descripcion_evento` AS `Descripcion_evento`, `ct`.`Cantidad_Personas_Cotización` AS `Cantidad_Personas_Cotización`, group_concat(`s`.`Nombre_Servicio` separator ', ') AS `Nombres_Servicios`, group_concat(`es`.`Valor_Total` separator ', ') AS `Valor_Servicios`, group_concat(`es`.`Cantidad_Servicios` separator ', ') AS `Cantidad`, group_concat(`s`.`Valor_Servicio` separator ', ') AS `Valor_Unitario`, group_concat(`s`.`Tipo_Servicio` separator ', ') AS `Tipo_Servicio` FROM (((((`evento` `e` join `cliente` `cl` on(`cl`.`idCliente` = `e`.`Cliente_idCliente`)) join `cotizante` `c` on(`c`.`Correo_Cotizante` = `cl`.`Correo_cotizante`)) join `cotización` `ct` on(`ct`.`No_Cotizacion` = `e`.`Cotizacion_No_Cotizacion`)) join `evento_servicio` `es` on(`es`.`Evento_idEvento` = `e`.`idEvento`)) join `servicio` `s` on(`s`.`idServicio` = `es`.`Servicio_idServicio`)) GROUP BY `e`.`idEvento` ;
 
 -- --------------------------------------------------------
 
