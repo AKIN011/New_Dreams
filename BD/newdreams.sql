@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2024 a las 05:03:44
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 23-05-2024 a las 00:26:17
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -798,14 +798,15 @@ CREATE TABLE `pagos` (
 --
 
 INSERT INTO `pagos` (`No_Pagos`, `Referente`, `Nombre_Pagos`, `Apellido_Pagos`, `Dia_hora_pagos`, `Valor_pagos`, `Evento_idEvento`, `Evento_Cliente_idCliente`) VALUES
-('P0001', 0, 'Mauricio', 'Torres', '2023-10-25 10:30:00', 50000, 1, 'CL001'),
-('P0002', 0, 'Pepito', 'Perez', '2024-06-23 06:00:00', 70000, 2, 'CL002'),
-('P0003', 0, 'Valentina', 'Paez', '2024-02-03 02:00:00', 30000, 3, 'CL003'),
-('P0004', 0, 'Santiago', 'Castellanos', '2023-07-28 10:15:00', 250000, 4, 'CL004'),
-('P0005', 0, 'Mauricio', 'Torres', '2023-08-02 02:30:00', 450000, 5, 'CL005'),
-('P0006', 1, 'Pepito', 'Perez', '2024-05-20 04:52:00', 50000, 2, 'CL002'),
-('P0007', 2, 'Pepito', 'Perez', '2024-05-19 03:30:00', 50000, 2, 'CL002'),
-('P0008', 3, 'Pepito', 'Perez', '2024-05-18 03:30:00', 500000, 2, 'CL002');
+('P0001', 0, 'Mauricio', 'Torres', '2023-10-25 10:30:00', 50000, 1, 'CL003'),
+('P0002', 0, 'Pepito', 'Perez', '2024-06-23 06:00:00', 70000, 1, 'CL001'),
+('P0003', 0, 'Valentina', 'Paez', '2024-02-03 02:00:00', 30000, 3, 'CL004'),
+('P0004', 0, 'Santiago', 'Castellanos', '2023-07-28 10:15:00', 250000, 4, 'CL005'),
+('P0005', 0, 'Mauricio', 'Torres', '2023-08-02 02:30:00', 450000, 5, 'CL003'),
+('P0006', 1, 'Pepito', 'Perez', '2024-05-20 04:52:00', 50000, 1, 'CL001'),
+('P0007', 2, 'Pepito', 'Perez', '2024-05-19 03:30:00', 50000, 1, 'CL001'),
+('P0008', 3, 'Pepito', 'Perez', '2024-05-18 03:30:00', 500000, 1, 'CL001'),
+('P0009', 4, 'pepito', 'perez', '2024-05-22 13:00:00', 100000, 1, 'CL001');
 
 --
 -- Disparadores `pagos`
@@ -964,6 +965,7 @@ CREATE TABLE `vista_evento` (
 ,`Cantidad` mediumtext
 ,`Valor_Unitario` mediumtext
 ,`Tipo_Servicio` mediumtext
+,`idCliente` char(5)
 );
 
 -- --------------------------------------------------------
@@ -982,7 +984,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `vista_evento`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_evento`  AS SELECT `c`.`Nombre_Cotizante` AS `Nombre_Cotizante`, `c`.`Apellido_Cotizante` AS `Apellido_Cotizante`, `c`.`Correo_Cotizante` AS `Correo_Cotizante`, `c`.`Telefono_Cotizante` AS `Telefono_Cotizante`, `e`.`idEvento` AS `idEvento`, `e`.`Tipo_evento` AS `Tipo_evento`, `e`.`Fecha_evento` AS `Fecha_evento`, `e`.`Estado_evento` AS `Estado_evento`, `e`.`Descripcion_evento` AS `Descripcion_evento`, `ct`.`Cantidad_Personas_Cotización` AS `Cantidad_Personas_Cotización`, group_concat(`s`.`Nombre_Servicio` separator ', ') AS `Nombres_Servicios`, group_concat(`es`.`Valor_Total` separator ', ') AS `Valor_Servicios`, group_concat(`es`.`Cantidad_Servicios` separator ', ') AS `Cantidad`, group_concat(`s`.`Valor_Servicio` separator ', ') AS `Valor_Unitario`, group_concat(`s`.`Tipo_Servicio` separator ', ') AS `Tipo_Servicio` FROM (((((`evento` `e` join `cliente` `cl` on(`cl`.`idCliente` = `e`.`Cliente_idCliente`)) join `cotizante` `c` on(`c`.`Correo_Cotizante` = `cl`.`Correo_cotizante`)) join `cotización` `ct` on(`ct`.`No_Cotizacion` = `e`.`Cotizacion_No_Cotizacion`)) join `evento_servicio` `es` on(`es`.`Evento_idEvento` = `e`.`idEvento`)) join `servicio` `s` on(`s`.`idServicio` = `es`.`Servicio_idServicio`)) GROUP BY `e`.`idEvento` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_evento`  AS SELECT `c`.`Nombre_Cotizante` AS `Nombre_Cotizante`, `c`.`Apellido_Cotizante` AS `Apellido_Cotizante`, `c`.`Correo_Cotizante` AS `Correo_Cotizante`, `c`.`Telefono_Cotizante` AS `Telefono_Cotizante`, `e`.`idEvento` AS `idEvento`, `e`.`Tipo_evento` AS `Tipo_evento`, `e`.`Fecha_evento` AS `Fecha_evento`, `e`.`Estado_evento` AS `Estado_evento`, `e`.`Descripcion_evento` AS `Descripcion_evento`, `ct`.`Cantidad_Personas_Cotización` AS `Cantidad_Personas_Cotización`, group_concat(`s`.`Nombre_Servicio` separator ', ') AS `Nombres_Servicios`, group_concat(`es`.`Valor_Total` separator ', ') AS `Valor_Servicios`, group_concat(`es`.`Cantidad_Servicios` separator ', ') AS `Cantidad`, group_concat(`s`.`Valor_Servicio` separator ', ') AS `Valor_Unitario`, group_concat(`s`.`Tipo_Servicio` separator ', ') AS `Tipo_Servicio`, `cl`.`idCliente` AS `idCliente` FROM (((((`evento` `e` join `cliente` `cl` on(`cl`.`idCliente` = `e`.`Cliente_idCliente`)) join `cotizante` `c` on(`c`.`Correo_Cotizante` = `cl`.`Correo_cotizante`)) join `cotización` `ct` on(`ct`.`No_Cotizacion` = `e`.`Cotizacion_No_Cotizacion`)) join `evento_servicio` `es` on(`es`.`Evento_idEvento` = `e`.`idEvento`)) join `servicio` `s` on(`s`.`idServicio` = `es`.`Servicio_idServicio`)) GROUP BY `e`.`idEvento` ;
 
 --
 -- Índices para tablas volcadas
