@@ -10,7 +10,9 @@ import Modelo.pago;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -53,6 +55,29 @@ public class pagoDAO {
             e.printStackTrace(); // Imprimir el error
         }
         return lista;
+    }
+
+    public boolean RegistrarPago(String Nombre, String Apellido, Date fecha, int Valor, int idEvento, String idCliente) {
+        String sql = "CALL SP_INSERT_PAGOS(?, ?, ?, ?, ?, ?)";
+        boolean exito = false;
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, Nombre);
+            ps.setString(2, Apellido);
+            ps.setDate(3, (java.sql.Date) fecha);
+            ps.setInt(4, Valor);
+            ps.setInt(5, idEvento);
+            ps.setString(6, idCliente);
+            int filasAfectadas = ps.executeUpdate();
+            if (filasAfectadas > 0){
+                exito = true;
+                
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace(); // Imprimir el error
+        }
+        return exito;
     }
 
 }

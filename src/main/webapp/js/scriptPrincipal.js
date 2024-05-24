@@ -37,8 +37,8 @@ function loadContent(url) {
             document.getElementById('main').innerHTML = this.responseText;
             initializeDataTables();  // Inicializa DataTables después de cargar el contenido
             //// Cargar script específico para detallesCotizacion.jsp si es la página que se cargó
-            if (url.includes("detallesCotizacion.jsp")) {
-                loadScript('js/scriptDetallesCotizacion.js', function () {
+            if (url.includes("detallesCotizacion.jsp", "pagos.jsp")) {
+                loadScript('js/scriptDetallesCotizacion.js', 'js/scriptPagos', function () {
                     console.log("Script de detallesCotizacion.js cargado.");
                 });
             }

@@ -34,7 +34,11 @@ public class PagoServlet extends HttpServlet {
             request.getRequestDispatcher("pagos.jsp").forward(request, response);
             
         }
+        
+        
     }
+    
+    
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -41,10 +41,31 @@
                     </table>
                 </div>
                 <div class="form-group col-lg-6 col-md-6">
-                    <a href="PagoServlet?menu=listaPagos&idEvento=${Detalle[4]}&idCliente=${Detalle[11]}"><button type="button" class="btn btn-primary btn-block">Registrar comprobante</button></a>
+                    <a href=""><button type="button" class="btn btn-primary btn-block" onclick="">Registrar comprobante</button></a>
                 </div>
                 <div class="form-group col-lg-6 col-md-6">
                     <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Agregar pago</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Nombre">
+                        <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Apellido">
+                        <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Fecha">
+                        <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Valor">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" onclick="">Agregar</button>
+                    </div>
                 </div>
             </div>
         </div>
