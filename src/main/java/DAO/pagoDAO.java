@@ -4,8 +4,10 @@
  */
 package DAO;
 
+import Modelo.cliente;
 import Modelo.conexion;
 import Modelo.cotizante;
+import Modelo.evento;
 import Modelo.pago;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,6 +25,8 @@ public class pagoDAO {
 
     pago pago = new pago();
     cotizante cotizante = new cotizante();
+    cliente cliente = new cliente();
+    evento evento = new evento();
 
     Connection con = new conexion().conectar();
     PreparedStatement ps;
@@ -30,7 +34,7 @@ public class pagoDAO {
 
     public List<Object[]> ListarPagos(String idCliente, int idEvento) {
         List<Object[]> lista = new ArrayList<>();
-        String sql = "SELECT p.No_Pagos, p.Referente, c.Nombre_Cotizante, c.Apellido_Cotizante, p.Dia_hora_pagos, p.Valor_pagos FROM pagos p "
+        String sql = "SELECT p.No_Pagos, p.Referente, c.Nombre_Cotizante, c.Apellido_Cotizante, p.Dia_hora_pagos, p.Valor_pagos, cl.idCliente, e.idEvento  FROM pagos p "
                 + "JOIN cliente cl ON p.Evento_Cliente_idCliente = cl.idCliente "
                 + "JOIN cotizante c ON cl.Correo_cotizante = c.Correo_Cotizante "
                 + "JOIN evento e ON p.Evento_idEvento = e.idEvento "
@@ -47,9 +51,12 @@ public class pagoDAO {
                 cotizante.setCotizanteApellido(rs.getString("Apellido_Cotizante"));
                 pago.setFechaPagos(rs.getDate("Dia_hora_pagos"));
                 pago.setValorPagos(rs.getInt("Valor_pagos"));
-                Object[] pagoArray = {pago.getIdPagos(), pago.getReferente(), cotizante.getCotizanteNombre(), cotizante.getCotizanteApellido(), pago.getFechaPagos(), pago.getValorPagos()};
+                cliente.setCltId(rs.getString("idCliente"));
+                evento.setEventoId(rs.getInt("idEvento"));
+                Object[] pagoArray = {pago.getIdPagos(), pago.getReferente(), cotizante.getCotizanteNombre(), cotizante.getCotizanteApellido(), pago.getFechaPagos(), 
+                    pago.getValorPagos(), cliente.getCltId(), evento.getEventoId()};
                 lista.add(pagoArray);
-
+                
             }
         } catch (Exception e) {
             e.printStackTrace(); // Imprimir el error
@@ -79,5 +86,5 @@ public class pagoDAO {
         }
         return exito;
     }
-
+    
 }

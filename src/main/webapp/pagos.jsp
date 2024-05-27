@@ -6,7 +6,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <!-- CSS de Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     </head>
+
     <body id="body-pd">
         <!--Container Main start-->
         <div class="block-heading">
@@ -14,7 +17,7 @@
         </div><br>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-lg-10 col-md-10">
+                <div class="col-lg-12 col-md-12">
                     <table id="Table" class="table display">
                         <thead>
                             <tr>
@@ -35,20 +38,24 @@
                                     <td>${Pago[4]}</td>
                                     <td>${Pago[5]}</td>
                                 </tr>
-                            </c:forEach>
 
+                            </c:forEach>
+                            <c:forEach var="Pago" items="${Pagos}">
+                            <input id="card-holder" type="hidden" class="form-control" value="${Pago[6]}" readonly>
+                            <input id="card-holder" type="hidden" class="form-control" value="${Pago[7]}" readonly>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>
                 <div class="form-group col-lg-6 col-md-6">
-                    <a href=""><button type="button" class="btn btn-primary btn-block" onclick="">Registrar comprobante</button></a>
+                    <button type="button" class="btn btn-primary btn-block" onclick="abrirModal()">Registrar comprobante</button>
                 </div>
                 <div class="form-group col-lg-6 col-md-6">
                     <a href="PrincipalServlet?menu=Eventos&accion=listar"><button type="button" class="btn btn-primary btn-block">Atras</button></a>
                 </div>
             </div>
         </div>
-        
+
         <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -59,15 +66,19 @@
                     <div class="modal-body">
                         <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Nombre">
                         <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Apellido">
-                        <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Fecha">
+                        <input type="date" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Fecha">
                         <input type="text" id="searchInput" onkeyup="" class="form-control mb-3" placeholder="Valor">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" onclick="">Agregar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></a>
+                        <a href=""><button type="button" class="btn btn-primary" >Agregar</button></a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- JavaScript de Bootstrap (requiere jQuery) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>

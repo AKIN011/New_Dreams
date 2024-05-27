@@ -118,5 +118,6 @@
         <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
         <!-- Detalle Cotizacion JS -->
         <script src="js/scriptDetallesCotizacion.js"></script>
+        <script src="js/scriptPagos.js"></script>
     </body>
 </html>
