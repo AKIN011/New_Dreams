@@ -42,6 +42,11 @@ function loadContent(url) {
                     console.log("Script de detallesCotizacion.js cargado.");
                 });
             }
+            if (url.includes("pagos.jsp")) {
+                loadScript('js/scriptPagos.js', function () {
+                    console.log("Script de scriptPagos.js cargado.");
+                });
+            }
             // Reasignar los eventos click a los nuevos enlaces cargados
             var contentLinks = document.querySelectorAll('#main a');
             contentLinks.forEach(function (link) {
